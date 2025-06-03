@@ -16,10 +16,12 @@ spec:
     image:
       registry: xpkg.upbound.io
       repository: upbound/backstage
-      tag: v0.2.0
+      tag: v0.3.0
     config:
       app:
         title: "solution-idp"
+      organization:
+        name: "upbound-demo"
       kubernetes:
         frontend:
           podDelete:
@@ -54,12 +56,14 @@ spec:
             - group: "aws.platform.upbound.io"
               apiVersion: "v1alpha1"
               plural: "xeks"
+              singular: "xeks"
             - group: "aws.platform.upbound.io"
               apiVersion: "v1alpha1"
               plural: "xnetworks"
             - group: "aws.platform.upbound.io"
               apiVersion: "v1alpha1"
               plural: "xpodidentities"
+              singular: "xpodidentity"
             - group: "pkg.crossplane.io"
               apiVersion: "v1"
               plural: "providers"
